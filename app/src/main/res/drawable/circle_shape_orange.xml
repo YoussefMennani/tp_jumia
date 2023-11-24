@@ -2,8 +2,8 @@
 <!-- res/drawable/circle_shape.xml -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="oval">
-    <solid android:color="#FF9800"/>
+    <solid android:color="#fb820b"/>
     <stroke
-        android:color="#FF9800"
+        android:color="#fb820b"
         android:width="2dp"/>
 </shape>

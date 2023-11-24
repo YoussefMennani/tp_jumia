@@ -31,10 +31,11 @@
 
     <GridLayout
 
-        android:layout_margin="5dp"
         android:id="@+id/gridLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginStart="4dp"
         android:background="@color/white"
         android:columnCount="4"
         android:padding="15dp"
@@ -42,7 +43,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.065">
+        app:layout_constraintVertical_bias="0.026">
 
         <LinearLayout
             android:layout_columnWeight="1"
@@ -56,17 +57,15 @@
                 android:layout_gravity="center"
                 android:background="@drawable/circle_shape"
                 android:padding="4dp"
-                android:src="@drawable/bag_item"
-                />
+                android:src="@drawable/bag_item" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Jumia Mall"
-                android:textStyle="bold"
                 android:layout_marginTop="10dp"
-                />
+                android:text="Jumia Mall"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -87,8 +86,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Jumia Global"
                 android:layout_marginTop="10dp"
+                android:text="Jumia Global"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -111,8 +110,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Jumia Prime"
                 android:layout_marginTop="10dp"
+                android:text="Jumia Prime"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -134,24 +133,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Airtime &amp; Bill"
                 android:layout_marginTop="10dp"
+                android:text="Airtime &amp; Bill"
                 android:textStyle="bold" />
         </LinearLayout>
 
 
-
-
     </GridLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:orientation="vertical"
 
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gridLayout"
+        app:layout_constraintVertical_bias="0.0"
         tools:layout_editor_absoluteX="0dp">
 
         <!-- Add your child views here -->
@@ -167,66 +165,67 @@
             app:cardElevation="4dp"
 
             >
+
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:rowCount="2"
                 android:columnCount="1"
+                android:rowCount="2"
 
                 >
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingVertical="10dp"
-                    android:paddingHorizontal="5dp"
                     android:background="@color/red"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="10dp"
 
                     >
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:text="DEALS OF THE DAY"
                         android:textColor="@color/white"
                         android:textStyle="bold"
-                        android:layout_weight="1"
 
                         />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="SEE ALL"
-                        android:textColor="@color/white"
-                        android:textStyle="bold"
                         android:layout_weight="1"
                         android:gravity="end"
-                        />
+                        android:text="SEE ALL"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
-
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/red"
                     android:orientation="horizontal"
                     android:paddingHorizontal="5dp"
-                    android:paddingVertical="10dp"
-                    android:background="@color/red"
-                    >
+                    android:paddingVertical="10dp">
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/click_32"
-                        />
+                        android:src="@drawable/click_32" />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="23h : 27m : 58s left"
-                        android:textColor="@color/white"
-
                         android:layout_weight="1"
+                        android:text="23h : 27m : 58s left"
+
+                        android:textColor="@color/white"
                         android:textSize="25dp"
 
                         />
@@ -237,76 +236,25 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:background="@color/gray"
-                    >
-
-                    <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_weight="1"
-                                android:background="@color/white"
-                                android:layout_marginRight="1dp"
-
-                                >
-
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="150dp"
-                                    android:src="@drawable/tshirt"
-                                    android:id="@+id/imageProduct"
-
-                                    />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_alignEnd="@+id/imageProduct"
-                                    android:layout_marginStart="5dp"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_marginEnd="5dp"
-                                    android:layout_marginBottom="5dp"
-                                    android:background="#80FF0000"
-                                    android:padding="10dp"
-                                    android:text="-29%"
-                                    android:textStyle="bold"
-                                    android:textColor="@color/white" />
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Smoother Gliding Steam lr.."
-                                    android:gravity="center"
-                                    android:id="@+id/titeProduct1"
-                                    android:layout_below="@+id/imageProduct"
-                                    />
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="2,490"
-                                    android:gravity="center"
-                                    android:textStyle="bold"
-                                    android:id="@+id/price"
-                                    android:layout_below="@+id/titeProduct1"
-                                    />
-                            </RelativeLayout>
+                    android:orientation="horizontal">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
+                        android:layout_marginRight="1dp"
                         android:layout_weight="1"
                         android:background="@color/white"
-                        android:layout_marginRight="1dp"
+                        android:orientation="vertical"
 
                         >
 
                         <ImageView
+                            android:id="@+id/imageProduct"
                             android:layout_width="wrap_content"
                             android:layout_height="150dp"
+                            android:layout_marginVertical="5dp"
                             android:src="@drawable/image2"
-                            android:id="@+id/imageProduct"
 
                             />
 
@@ -318,38 +266,206 @@
                             android:layout_marginTop="5dp"
                             android:layout_marginEnd="5dp"
                             android:layout_marginBottom="5dp"
-                            android:background="#80FF0000"
                             android:padding="10dp"
                             android:text="-29%"
-                            android:textStyle="bold"
-                            android:textColor="@color/white" />
+                            android:background="#E2F1DBD7"
+                            android:textColor="#a45149"
+                            android:textStyle="bold" />
 
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Smoother Gliding Steam lr.."
-                            android:gravity="center"
                             android:id="@+id/titeProduct1"
-                            android:layout_below="@+id/imageProduct"
-                            />
-                        <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="2,490"
+                            android:layout_below="@+id/imageProduct"
+                            android:layout_marginVertical="5dp"
                             android:gravity="center"
-                            android:textStyle="bold"
+                            android:text="Smoother Gliding Steam lr.." />
+
+                        <TextView
                             android:id="@+id/price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_below="@+id/titeProduct1"
-                            />
+                            android:layout_marginVertical="5dp"
+                            android:gravity="center"
+                            android:text="2,490"
+                            android:textStyle="bold" />
                     </RelativeLayout>
 
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+
+                        >
+
+                        <ImageView
+                            android:id="@+id/imageProduct"
+                            android:layout_width="wrap_content"
+                            android:layout_height="150dp"
+                            android:layout_marginVertical="5dp"
+                            android:src="@drawable/tshirt"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/imageProduct"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:text="-29%"
+                            android:background="#E2F1DBD7"
+                            android:textColor="#a45149"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/titeProduct1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageProduct"
+                            android:layout_marginVertical="5dp"
+                            android:gravity="center"
+                            android:text="Smoother Gliding Steam lr.." />
+
+                        <TextView
+                            android:id="@+id/price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/titeProduct1"
+                            android:layout_marginVertical="5dp"
+                            android:gravity="center"
+                            android:text="2,490"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
 
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gray"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+
+                        >
+
+                        <ImageView
+                            android:id="@+id/imageProduct"
+                            android:layout_width="wrap_content"
+                            android:layout_height="150dp"
+                            android:layout_marginVertical="5dp"
+                            android:src="@drawable/image2"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/imageProduct"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:text="-29%"
+                            android:background="#E2F1DBD7"
+                            android:textColor="#a45149"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/titeProduct1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageProduct"
+                            android:layout_marginVertical="5dp"
+                            android:gravity="center"
+                            android:text="Smoother Gliding Steam lr.." />
+
+                        <TextView
+                            android:id="@+id/price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/titeProduct1"
+                            android:layout_marginVertical="5dp"
+                            android:gravity="center"
+                            android:text="2,490"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+
+                        >
+
+                        <ImageView
+                            android:id="@+id/imageProduct"
+                            android:layout_width="wrap_content"
+                            android:layout_height="150dp"
+                            android:layout_marginVertical="5dp"
+                            android:src="@drawable/tshirt"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/imageProduct"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="#E2F1DBD7"
+                            android:textColor="#a45149"
+                            android:padding="10dp"
+                            android:text="-29%"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/titeProduct1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageProduct"
+                            android:layout_marginVertical="5dp"
+                            android:gravity="center"
+                            android:text="Smoother Gliding Steam lr.." />
+
+                        <TextView
+                            android:id="@+id/price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/titeProduct1"
+                            android:layout_marginVertical="5dp"
+                            android:gravity="center"
+                            android:text="2,490"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
 
             </GridLayout>
-
 
 
             <!-- Your existing LinearLayout or other views go here -->
